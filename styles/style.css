@@ -1,0 +1,133 @@
+/* Import Seperated elements */
+@import url(fran.css);
+@import url(form.css);
+
+/* Color Variables */
+:root {
+  --green: #21412A;
+  --gold: #998643;
+  --yellow: #FBB555;
+  --red: #8B3A19;
+  --white: #FFFFFF;
+  --light-gray: #E7E7E7;
+  --lighter-gray: #F1F1F1;
+  --dark-gray: #2B2B2B;
+  --black: #000000;
+}
+
+/**
+ * The style for universal elements 
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+.skinny-text{
+  font-weight: 100;
+}
+
+.bold-text{
+  font-weight: 700;
+}
+
+.hidden{
+  display: none;
+}
+
+hr.solid {
+  border: 2px solid var(--gold);
+  margin: 0px;
+}
+
+/* Styling for header */
+.fran-cheese-ad-header-title{
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 45px;
+  letter-spacing: normal;
+  margin: 0%;
+}
+
+.header-img-container{
+  background-image: url("../images/cheesy-header.png");
+  background-position-y: 55%;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Styling for the main text paragrah */
+.main-paragraph{
+  width: 45%;
+  padding-left: 5%;
+  padding-right: 10%;
+  padding-top: 2%;
+  flex-grow: 2;
+}
+
+/* Images for footer */
+.cheesy-1{
+  background-image: url("../images/cheesy-row-img-1.png");
+}
+.cheesy-2{
+  background-image: url("../images/cheesy-row-img-2.png");
+}
+.cheesy-3{
+  background-image: url("../images/cheesy-row-img-3.png");
+}
+.cheesy-4{
+  background-image: url("../images/cheesy-row-img-4.png");
+}
+
+/* Styling and Creating the flex containers */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item-half {
+  padding: 2rem;
+}
+
+.flex-item-quarter {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 25%;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 1/1;
+}
+
+/* Responsive layout - for tablets - makes a two column-layout instead of a four-column layout */
+@media (max-width: 800px) {
+  .flex-item-quarter {
+    flex: 50%;
+  }
+  .flex-item-half {
+    flex: 100%;
+  }
+  .form {
+    order: 0;
+  }
+  .main-paragraph{
+    width: 100%;
+  }
+}
+
+/* Responsive layout - for phones -  makes a one column-layout instead of a four-column layout */
+@media (max-width: 640px) {
+  .flex-container { 
+    display: flex;
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+  .flex-item-quarter {
+    flex: 100%;
+  }
+}
+

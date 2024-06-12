@@ -1,0 +1,92 @@
+/* This may seem like a long CSS file, but it's simpler than it looks. There's */
+/* some default tag CSS, a class for buttons, a couple classes for the header,  */
+/* and some classes for structuring content.  */
+
+
+p, h1, h2, h3, a {
+    font-family: 'Montserrat';
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* === Button CSS ======= */
+/* === used within the 'a' tag for many Franciscan button-styled links === */
+.root-lowercase-btn {
+    border: 1px solid transparent;
+    background-color: var(--root-lowercase-btn-background-color);
+    color: var(--root-lowercase-btn-color);
+    border-color: var(--root-lowercase-btn-border-color);
+    --root-lowercase-btn-background-color: #998643;
+    --root-lowercase-btn-color: white;
+    --root-lowercase-btn-border-color: transparent;
+    border-radius: 25px;
+    padding: .5em .8em;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    transition: .2s;
+}
+.root-lowercase-btn:hover {
+    background-color: var(--far-gen-btn-background-color-hover);
+    color: var(--far-gen-btn-color-hover);
+    border-color: var(--far-gen-btn-border-color-hover);
+    --far-gen-btn-background-color-hover: #6b5e2f;
+    --far-gen-btn-color-hover: white;
+    --far-gen-btn-border-color-hover: transparent;
+}
+
+/* === Site Content Padding ======= */
+/* === these are useful classes to keep content such a row of text and images from  === */
+/* === reaching to the ends of the screen. The class 'site-para-box' is a little  === */
+/* === shorter than 'site-content-box,' although both break for mobile to become the  === */
+/* === same width.  === */
+.site-para-box {
+    width: 75%;
+    margin: auto
+}
+
+.site-content-box {
+    width: 85%;
+    margin: auto
+}
+
+
+@media only screen and (max-width: 500px) {
+    .site-para-box,.site-content-box {
+        width:90%;
+        padding-left: 1em;
+        padding-right: 1em
+    }
+}
+
+
+
+/* === Some (maybe) helpful header CSS ======= */
+/* === The recommended way to use these classes is by placing fran-cheese-ad-header in a div  === */
+/* === that then holds a div with the class fran-cheese-ad-header, which holds the content.  === */
+
+/* === EXAMPLE  === */
+/* === <div class="fran-cheese-ad-header" style="background-image: url('/cheese-img.png');">  === */
+/* ===     <div class="fran-cheese-ad-header-gradient">  === */
+/* ===  >>>> YOUR INNER CONTENT <<<<  === */
+/* ===     </div>  === */
+/* === </div>  === */
+
+.fran-cheese-ad-header {
+    background-size: cover;
+    background-position-x: 55%;
+    background-position-y: 48%;
+}
+.fran-cheese-ad-header-gradient {
+    background: linear-gradient(90deg, black, #0000008f, transparent);
+    padding-top: 9em;
+    padding-bottom: 6em;
+    padding-left: 3em;
+    padding-right: 3em;
+}
